@@ -1,5 +1,9 @@
 #include <iostream>
-#include <SFML/Graphics.hpp>
+#include <SFML/Window.hpp>
+
+#define GLEW_STATIC
+#include <GL/glew.h>
+#include <GL/gl.h>
 
 int main()
 {
@@ -11,9 +15,7 @@ int main()
 	settings.minorVersion = 5;
 
 
-	sf::RenderWindow window(sf::VideoMode(200, 200), "SFML works!", sf::Style::Default, settings);
-   	sf::CircleShape shape(100.f);
-   	shape.setFillColor(sf::Color::Red);
+	sf::Window window(sf::VideoMode(200, 200), "OpenGL works!", sf::Style::Default, settings);
 
 	while (window.isOpen())
 	{
@@ -24,8 +26,9 @@ int main()
 			window.close();
 		}
 
-	window.clear();
-	window.draw(shape);
+	glClearColor(0, 0.5, 1, 1);
+	glClear(GL_COLOR_BUFFER_BIT);	
+
 	window.display();
 	}
 

@@ -1,5 +1,5 @@
 OBJ = main.o
-LIB = -lsfml-graphics -lsfml-window -lsfml-system -pthread
+LIB = -lsfml-graphics -lsfml-window -lsfml-system -pthread -lGL -lGLEW
 CFLAGS = -Wall -Wextra -Werror -O2 -std=c++14
 CC = g++
 TARGET = Programme
