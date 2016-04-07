@@ -16,6 +16,7 @@ int main()
 
 
 	sf::Window window(sf::VideoMode(200, 200), "OpenGL works!", sf::Style::Default, settings);
+	glewInit();
 
 	while (window.isOpen())
 	{
